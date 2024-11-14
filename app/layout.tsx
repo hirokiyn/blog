@@ -3,6 +3,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@/components/analytics";
+import { SpeedInsights } from "@/components/speed-insights";
 import { ModeToggle } from "@/components/mode-toggle";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 						<main>{children}</main>
 					</div>
 					<Analytics />
+					<SpeedInsights />
 				</ThemeProvider>
 			</body>
 		</html>
