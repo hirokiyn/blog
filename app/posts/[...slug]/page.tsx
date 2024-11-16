@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { allPosts } from "contentlayer/generated";
+import { parseISO, format } from "date-fns";
 
 import { Metadata } from "next";
 import { Mdx } from "@/components/mdx-components";
@@ -54,6 +55,9 @@ export default async function PostPage({ params }: PostProps) {
 				<p className="mt-0 text-xl text-slate-700 dark:text-slate-200">
 					{post.description}
 				</p>
+			)}
+			{post.date && (
+				<time dateTime={post.date}>{format(parseISO(post.date), "LLLL	d, yyyy")}</time>
 			)}
 			<hr className="my-4" />
 			<Mdx code={post.body.code} />
