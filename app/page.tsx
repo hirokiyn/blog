@@ -1,24 +1,18 @@
-import { allPosts } from "@/.contentlayer/generated";
+import { allPosts } from "contentlayer/generated";
+
 import Link from "next/link";
+import { Profile } from "@/components/profile";
 
 export default function Home() {
-	allPosts.sort((a, b) => (a.date > b.date ? -1 : 1));
+	const posts = allPosts.sort((a, b) => (a.date > b.date ? -1 : 1));
 
 	return (
 		<>
-			<div className="flex items-center space-x-2 pt-10">
-				<img src="/logo.png" alt="logo" className="w-10 rounded-full" />
-				<h1 className="text-xl font-bold">hiroki</h1>
-				<Link
-					href="https://x.com/hirokiyn"
-					target="_blank"
-					className="text-slate-500 underline dark:text-slate-400"
-				>
-					@hirokiyn
-				</Link>
-			</div>
+			<h1 className="pt-10">
+				<Profile />
+			</h1>
 			<div className="prose dark:prose-invert">
-				{allPosts.map((post) => (
+				{posts.map((post) => (
 					<article key={post._id}>
 						<Link href={post.slug}>
 							<h2>{post.title}</h2>
