@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { allPages } from "contentlayer/generated";
 
 import { Mdx } from "@/components/mdx-components";
+import { Profile } from "@/components/profile";
 
 interface PageProps {
 	params: {
@@ -53,6 +54,7 @@ export default async function PagePage({ params }: PageProps) {
 			{page.description && <p className="text-xl">{page.description}</p>}
 			<hr />
 			<Mdx code={page.body.code} />
+			<Profile />
 		</article>
 	);
 }
