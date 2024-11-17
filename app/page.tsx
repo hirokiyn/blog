@@ -9,7 +9,7 @@ export default function Home() {
 	return (
 		<>
 			<h1 className="pt-10">
-				<Profile />
+				<Profile link={false} />
 			</h1>
 			<div className="prose dark:prose-invert">
 				{posts.map((post) => (

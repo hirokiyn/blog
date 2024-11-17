@@ -11,7 +11,7 @@ import { ModeToggle } from "@/components/mode-toggle";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "hiroki",
+	title: "Blog by hiroki",
 	description:
 		"This is a personal blog for sharing things I'm learning through my work and other interests."
 };
