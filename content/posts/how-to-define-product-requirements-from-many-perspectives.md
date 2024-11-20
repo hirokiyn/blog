@@ -1,7 +1,7 @@
 ---
 title: How to define product requirements from many perspectives
 description: Product managers must define product requirements through PRDs, considering business, project, technology, performance, and design aspects, to ensure clear stakeholder communication and avoid repeated changes during development.
-date: 2022-03-02
+date: "2022-03-02"
 ---
 
 As a product manager, one of your primary responsibilities is to define product requirements and articulate them in a Product Requirements Document (PRD).

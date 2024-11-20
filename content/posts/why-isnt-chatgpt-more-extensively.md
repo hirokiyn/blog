@@ -1,7 +1,7 @@
 ---
 title: Why isn't ChatGPT used more extensively?
 description: ChatGPT's revolutionary potential isn't fully realized due to challenges in giving precise instructions, limitations of its chat-based interface, and the need for more intuitive AI interfaces to broaden accessibility.
-date: 2024-11-18
+date: "2024-11-18"
 ---
 
 Many of you might be familiar with ChatGPT.
@@ -11,7 +11,7 @@ So, why isn't it being used more extensively?
 
 In this article, I will delve deeper into why giving instructions to ChatGPT is particularly difficult in a work context, explore the limitations of its current chat-based interface, and discuss potential solutions that could make AI tools like ChatGPT more accessible and useful for a broader audience.
 
-## Freedom Paradox
+## Freedom paradox
 
 ChatGPT offers an incredible amount of freedom.
 It can write essays, answer questions, generate ideas, and even engage in creative writing.

@@ -5,18 +5,18 @@ import { Profile } from "@/components/profile";
 import { getPageBySlug, getAllPages } from "@/lib/api/pages";
 import markdownToHtml from "@/lib/markdownToHtml";
 
-interface PageProps {
-	params: {
-		slug: string[];
-	};
-}
+type PageProps = {
+	params: Promise<{
+		slug: string;
+	}>;
+};
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-	const slug = (await params)?.slug?.join("/");
+	const slug = (await params)?.slug;
 	const page = getPageBySlug(slug);
 
 	if (!page) {
-		return {};
+		return notFound();
 	}
 
 	return {
@@ -25,20 +25,22 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 	};
 }
 
-export async function generateStaticParams(): Promise<PageProps["params"][]> {
+export function generateStaticParams(): PageProps["params"][] {
 	const pages = getAllPages();
 
-	return pages.map((page) => ({
-		slug: page.slug.split("/")
-	}));
+	return pages.map((page) =>
+		Promise.resolve({
+			slug: page.slug
+		})
+	);
 }
 
-export default async function PagePage({ params }: PageProps) {
-	const slug = (await params)?.slug?.join("/");
+export default async function Page({ params }: PageProps) {
+	const slug = (await params)?.slug;
 	const page = getPageBySlug(slug);
 
 	if (!page) {
-		notFound();
+		return notFound();
 	}
 
 	const content = await markdownToHtml(page.content || "");

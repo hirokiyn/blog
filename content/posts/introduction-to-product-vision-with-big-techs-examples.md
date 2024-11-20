@@ -1,7 +1,7 @@
 ---
 title: Introduction to product vision with big tech's examples
 description: Product managers create and share a clear product vision to guide development, enhance decision-making, and foster collaboration. Examples include Google and Instagram. A well-shared vision unites teams and stakeholders.
-date: 2023-07-15
+date: "2023-07-15"
 ---
 
 Product managers play a critical role in ensuring the success of a product by creating, managing, and championing the product vision.

@@ -7,14 +7,14 @@ import { Profile } from "@/components/profile";
 import { getPostBySlug, getAllPosts, getMorePosts } from "@/lib/api/posts";
 import markdownToHtml from "@/lib/markdownToHtml";
 
-interface PostProps {
-	params: {
-		slug: string[];
-	};
-}
+type PostProps = {
+	params: Promise<{
+		slug: string;
+	}>;
+};
 
 export async function generateMetadata({ params }: PostProps): Promise<Metadata> {
-	const slug = (await params)?.slug?.join("/");
+	const slug = (await params)?.slug;
 	const post = getPostBySlug(slug);
 
 	if (!post) {
@@ -27,24 +27,26 @@ export async function generateMetadata({ params }: PostProps): Promise<Metadata>
 	};
 }
 
-export async function generateStaticParams(): Promise<PostProps["params"][]> {
+export function generateStaticParams(): PostProps["params"][] {
 	const posts = getAllPosts();
 
-	return posts.map((post) => ({
-		slug: post.slug.split("/")
-	}));
+	return posts.map((post) =>
+		Promise.resolve({
+			slug: post.slug
+		})
+	);
 }
 
-export default async function PostPage({ params }: PostProps) {
-	const slug = (await params)?.slug?.join("/");
+export default async function Post({ params }: PostProps) {
+	const slug = (await params)?.slug;
 	const post = getPostBySlug(slug);
 
 	if (!post) {
 		return notFound();
 	}
 
-	const content = await markdownToHtml(post.content || "");
 	const posts = getMorePosts(post.title);
+	const content = await markdownToHtml(post.content || "");
 
 	return (
 		<>
@@ -65,7 +67,7 @@ export default async function PostPage({ params }: PostProps) {
 			<div className="prose dark:prose-invert">
 				<h2>More posts</h2>
 				{posts.map((post) => (
-					<article>
+					<article key={post.slug}>
 						<Link href={`/posts/${post.slug}`}>
 							<h3>{post.title}</h3>
 						</Link>

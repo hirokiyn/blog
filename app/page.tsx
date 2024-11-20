@@ -13,7 +13,7 @@ export default function Home() {
 			</h1>
 			<div className="prose dark:prose-invert">
 				{posts.map((post) => (
-					<article>
+					<article key={post.slug}>
 						<Link href={`/posts/${post.slug}`}>
 							<h2>{post.title}</h2>
 						</Link>
