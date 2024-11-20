@@ -1,9 +1,9 @@
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
-import { allPages } from "contentlayer/generated";
 
-import { Mdx } from "@/components/mdx-components";
 import { Profile } from "@/components/profile";
+import { getPageBySlug, getAllPages } from "@/lib/api/pages";
+import markdownToHtml from "@/lib/markdownToHtml";
 
 interface PageProps {
 	params: {
@@ -11,19 +11,9 @@ interface PageProps {
 	};
 }
 
-async function getPageFromParams(params: PageProps["params"]) {
-	const slug = params?.slug?.join("/");
-	const page = allPages.find((page) => page.slugAsParams === slug);
-
-	if (!page) {
-		null;
-	}
-
-	return page;
-}
-
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-	const page = await getPageFromParams(params);
+	const slug = (await params)?.slug?.join("/");
+	const page = getPageBySlug(slug);
 
 	if (!page) {
 		return {};
@@ -36,24 +26,29 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export async function generateStaticParams(): Promise<PageProps["params"][]> {
-	return allPages.map((page) => ({
-		slug: page.slugAsParams.split("/")
+	const pages = getAllPages();
+
+	return pages.map((page) => ({
+		slug: page.slug.split("/")
 	}));
 }
 
 export default async function PagePage({ params }: PageProps) {
-	const page = await getPageFromParams(params);
+	const slug = (await params)?.slug?.join("/");
+	const page = getPageBySlug(slug);
 
 	if (!page) {
 		notFound();
 	}
 
+	const content = await markdownToHtml(page.content || "");
+
 	return (
-		<article className="prose dark:prose-invert py-6">
+		<article className="prose py-6 dark:prose-invert">
 			<h1>{page.title}</h1>
 			{page.description && <p className="text-xl">{page.description}</p>}
 			<hr />
-			<Mdx code={page.body.code} />
+			<div dangerouslySetInnerHTML={{ __html: content }} />
 			<Profile />
 		</article>
 	);

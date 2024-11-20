@@ -1,11 +1,11 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
-import { allPosts } from "contentlayer/generated";
 import { parseISO, format } from "date-fns";
 
-import Link from "next/link";
-import { Mdx } from "@/components/mdx-components";
 import { Profile } from "@/components/profile";
+import { getPostBySlug, getAllPosts, getMorePosts } from "@/lib/api/posts";
+import markdownToHtml from "@/lib/markdownToHtml";
 
 interface PostProps {
 	params: {
@@ -13,22 +13,12 @@ interface PostProps {
 	};
 }
 
-async function getPostFromParams(params: PostProps["params"]) {
-	const slug = params?.slug?.join("/");
-	const post = allPosts.find((post) => post.slugAsParams === slug);
-
-	if (!post) {
-		null;
-	}
-
-	return post;
-}
-
 export async function generateMetadata({ params }: PostProps): Promise<Metadata> {
-	const post = await getPostFromParams(params);
+	const slug = (await params)?.slug?.join("/");
+	const post = getPostBySlug(slug);
 
 	if (!post) {
-		return {};
+		return notFound();
 	}
 
 	return {
@@ -38,27 +28,27 @@ export async function generateMetadata({ params }: PostProps): Promise<Metadata>
 }
 
 export async function generateStaticParams(): Promise<PostProps["params"][]> {
-	return allPosts.map((post) => ({
-		slug: post.slugAsParams.split("/")
+	const posts = getAllPosts();
+
+	return posts.map((post) => ({
+		slug: post.slug.split("/")
 	}));
 }
 
 export default async function PostPage({ params }: PostProps) {
-	const post = await getPostFromParams(params);
+	const slug = (await params)?.slug?.join("/");
+	const post = getPostBySlug(slug);
 
 	if (!post) {
-		notFound();
+		return notFound();
 	}
 
-	const count = 2; // Number of more posts
-	const posts = allPosts
-		.filter((a) => a.title !== post.title)
-		.sort(() => (Math.random() > 0.5 ? 1 : -1))
-		.slice(0, count);
+	const content = await markdownToHtml(post.content || "");
+	const posts = getMorePosts(post.title);
 
 	return (
 		<>
-			<article className="prose dark:prose-invert py-6">
+			<article className="prose py-6 dark:prose-invert">
 				<h1 className="mb-2">{post.title}</h1>
 				{post.description && (
 					<p className="mt-0 text-xl text-slate-700 dark:text-slate-200">
@@ -69,14 +59,14 @@ export default async function PostPage({ params }: PostProps) {
 					<time dateTime={post.date}>{format(parseISO(post.date), "LLLL	d, yyyy")}</time>
 				)}
 				<hr className="my-4" />
-				<Mdx code={post.body.code} />
+				<div dangerouslySetInnerHTML={{ __html: content }} />
 				<Profile />
 			</article>
 			<div className="prose dark:prose-invert">
 				<h2>More posts</h2>
 				{posts.map((post) => (
-					<article key={post._id}>
-						<Link href={post.slug}>
+					<article>
+						<Link href={`/posts/${post.slug}`}>
 							<h3>{post.title}</h3>
 						</Link>
 						{post.description && <p>{post.description}</p>}
