@@ -1,7 +1,7 @@
 ---
 title: How does Google set goals and achieve them with OKRs?
 description: The OKRs (Objectives and Key Results) framework is a goal-setting tool that promotes agile, iterative progress. Popularized by Google, it emphasizes ambitious goals, measurable outcomes, and transparency to align individual and organizational objectives effectively.
-date: 2022-11-27
+date: "2022-11-27"
 ---
 
 An Obejective and Key Results (OKRs) framework is an effective goal-setting tool for communicating what you want to accomplish and how you will accomplish it.

@@ -1,7 +1,7 @@
 ---
 title: Data mesh success story in platform engineering
 description: Platform engineering enhances application delivery and business value by creating internal platforms, integrating data mesh principles for decentralized development. Effective product management ensures user needs are met, fostering innovation and strategic alignment.
-date: 2023-12-11
+date: "2023-12-11"
 ---
 
 Platform engineering is an emerging technology approach that not only propels the rapid delivery of applications but also amplifies their impact on business value.

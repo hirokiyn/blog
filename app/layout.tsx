@@ -7,13 +7,13 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@/components/analytics";
 import { SpeedInsights } from "@/components/speed-insights";
 import { ModeToggle } from "@/components/mode-toggle";
+import { TITLE, DESCRIPTION } from "@/lib/constants";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "Blog by hiroki",
-	description:
-		"This is a personal blog for sharing things I'm learning through my work and other interests."
+	title: TITLE,
+	description: DESCRIPTION
 };
 
 interface RootLayoutProps {

@@ -1,10 +1,10 @@
-import { allPosts } from "contentlayer/generated";
-
 import Link from "next/link";
+
 import { Profile } from "@/components/profile";
+import { getAllPosts } from "@/lib/api/posts";
 
 export default function Home() {
-	const posts = allPosts.sort((a, b) => (a.date > b.date ? -1 : 1));
+	const posts = getAllPosts();
 
 	return (
 		<>
@@ -13,8 +13,8 @@ export default function Home() {
 			</h1>
 			<div className="prose dark:prose-invert">
 				{posts.map((post) => (
-					<article key={post._id}>
-						<Link href={post.slug}>
+					<article key={post.slug}>
+						<Link href={`/posts/${post.slug}`}>
 							<h2>{post.title}</h2>
 						</Link>
 						{post.description && <p>{post.description}</p>}

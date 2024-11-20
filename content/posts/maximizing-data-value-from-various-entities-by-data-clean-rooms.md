@@ -1,7 +1,7 @@
 ---
 title: Maximizing data value from various entities by data clean rooms
 description: Data clean rooms (DCRs) are secure environments for collaborative data analysis, enhancing information value while maintaining privacy. They address data privacy rules and digital identifier changes, despite implementation challenges.
-date: 2023-11-23
+date: "2023-11-23"
 ---
 
 In the ever-shifting terrain of digital advertising, the pursuit of transparency and efficiency has given rise to a game-changing solution – data clean rooms (DCRs).
