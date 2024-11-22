@@ -5,7 +5,7 @@ import { parseISO, format } from "date-fns";
 
 import { Profile } from "@/components/profile";
 import { getPostBySlug, getAllPosts, getMorePosts } from "@/lib/api/posts";
-import markdownToHtml from "@/lib/markdownToHtml";
+import markdownToHtml from "@/lib/markdown-to-html";
 
 type PostProps = {
 	params: Promise<{

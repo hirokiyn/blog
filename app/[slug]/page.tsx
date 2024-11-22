@@ -3,7 +3,7 @@ import { Metadata } from "next";
 
 import { Profile } from "@/components/profile";
 import { getPageBySlug, getAllPages } from "@/lib/api/pages";
-import markdownToHtml from "@/lib/markdownToHtml";
+import markdownToHtml from "@/lib/markdown-to-html";
 
 type PageProps = {
 	params: Promise<{
