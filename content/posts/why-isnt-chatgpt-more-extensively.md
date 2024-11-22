@@ -2,6 +2,7 @@
 title: Why isn't ChatGPT used more extensively?
 description: ChatGPT's revolutionary potential isn't fully realized due to challenges in giving precise instructions, limitations of its chat-based interface, and the need for more intuitive AI interfaces to broaden accessibility.
 date: "2024-11-18"
+tags: ["product"]
 ---
 
 Many of you might be familiar with ChatGPT.

@@ -62,6 +62,13 @@ export default async function Post({ params }: PostProps) {
 				)}
 				<hr className="my-4" />
 				<div dangerouslySetInnerHTML={{ __html: content }} />
+				{post.tags && (
+					<div className="flex items-center space-x-2">
+						{post.tags.map((tag) => (
+							<Link href={`/categories/${tag}`}>#{tag}</Link>
+						))}
+					</div>
+				)}
 				<Profile />
 			</article>
 			<div className="prose dark:prose-invert">

@@ -2,6 +2,7 @@
 title: Practical guide to Agile success for efficient software development
 description: In 2001, developers in Snowbird, Utah, created the Agile Manifesto with four core values prioritizing individuals, working software, customer collaboration, and adaptability. Agile, especially Scrum, fosters iterative development, team collaboration, and continuous improvement through structured sprints.
 date: "2023-11-13"
+tags: ["engineering"]
 ---
 
 In the early days of the 21st century, a group of visionary software developers gathered in Snowbird, Utah, and formulated the Agile Manifesto.

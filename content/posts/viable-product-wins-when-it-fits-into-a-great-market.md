@@ -2,6 +2,7 @@
 title: Viable product wins when it fits into a great market
 description: Achieving Product-Market Fit (PMF) is crucial for startup success, signifying a product meets a significant market need. Focus on PMF involves market research, customer feedback, and continuous product adjustment.
 date: "2023-12-27"
+tags: ["product"]
 ---
 
 > The only thing that matters is getting to Product-Market Fit.

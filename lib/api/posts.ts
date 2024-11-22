@@ -7,6 +7,7 @@ type Post = {
 	title: string;
 	description: string;
 	date: string;
+	tags: string[];
 	content: string;
 };
 
@@ -42,4 +43,21 @@ export function getMorePosts(title: string): Post[] {
 		.sort(() => (Math.random() > 0.5 ? 1 : -1))
 		.slice(0, 2);
 	return posts;
+}
+
+export function getCategorizedPosts(tag: string) {
+	const slugs = getPostSlugs();
+	const posts = slugs
+		.map((slug) => getPostBySlug(slug))
+		.filter((post) => post.tags.includes(tag))
+		// sort posts by date in descending order
+		.sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+	return posts;
+}
+
+export function getAllCategories(): string[] {
+	const slugs = getPostSlugs();
+	const posts = slugs.map((slug) => getPostBySlug(slug));
+	const categories = Array.from(new Set(posts.flatMap((post) => post.tags)));
+	return categories;
 }

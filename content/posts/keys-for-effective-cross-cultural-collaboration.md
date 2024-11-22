@@ -2,6 +2,7 @@
 title: Keys for effective cross-cultural collaboration
 description: Cultural backgrounds shape our communication, feedback, persuasion, and trust-building methods. Explicit communication reduces miscommunication, while understanding cultural differences is vital for giving feedback. Trust varies by culture, necessitating careful team management for successful multicultural collaboration.
 date: "2022-10-10"
+tags: ["teamwork"]
 ---
 
 Most of us are influenced by our cultural background.
