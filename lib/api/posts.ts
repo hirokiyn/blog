@@ -1,3 +1,5 @@
+import { notFound } from "next/navigation";
+
 import fs from "fs";
 import matter from "gray-matter";
 import { join } from "path";
@@ -20,6 +22,11 @@ export function getPostSlugs() {
 export function getPostBySlug(slug: string) {
 	const realSlug = slug.replace(/\.md$/, "");
 	const fullPath = join(postsDirectory, `${realSlug}.md`);
+
+	if (!fs.existsSync(fullPath)) {
+		return notFound();
+	}
+
 	const fileContents = fs.readFileSync(fullPath, "utf8");
 	const { data, content } = matter(fileContents);
 
