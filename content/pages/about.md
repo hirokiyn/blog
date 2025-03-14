@@ -1,18 +1,20 @@
 ---
 title: About
-description: I am passionate about transforming the way we work using generative AI.
+description: I am building a future where multiple AI agents work with your team.
 ---
 
-As a product manager in the tech industry at a startup, I am dedicated to empowering businesses and individuals with data.
-Currently, I am leading the development of a modern data platform that enables seamless data utilization faster than ever.
+I’m an entrepreneur, product builder, and AI enthusiast, passionate about how AI agents are transforming the way we work and live. After years in the tech industry—most recently leading the development of an AI agent with federated search to help enterprises untangle vast databases—I’ve taken the leap to start my own business. My focus is on harnessing and managing multiple AI agents, developed by diverse tech companies and independent creators, to supercharge productivity and streamline workflows. I truly believe we’re at the dawn of an AI revolution, and I’m excited to be part of shaping what comes next.
 
-My educational background in computational science, particularly in optimization algorithms and artificial intelligence, has provided me with a strong foundation in designing and developing a range of data-driven solutions from search engines to demand prediction.
-I am particularly proud of my work on estimating brain injuries by data assimilation and deep learning, which earned me the best master’s thesis award.
-During my master’s program, I also gained valuable software engineering experience as an intern in Germany, where I developed and evaluated charging controllers for electric vehicles.
+## Exploring the Power of AI Collaboration
 
-I excel at product design and communication with a solid understanding of technical concepts.
-My experience working with international teams in diverse environments has honed my cross-cultural competencies, making me well-equipped to thrive in any global arena.
+I’m a founder of [Epismo](https://about.epismo.ai/en), a platform that enables seamless collaboration between humans and AI agents. This innovative approach allows teams to divide tasks effectively, optimize workflows, and enhance productivity by leveraging multiple specialized AI agents. The platform also features a knowledge timeline, centralizing team information and improving knowledge management. I’m eager to integrate these advancements into my work, driving more efficient and dynamic collaborations.
 
-I am always on the lookout for stimulating new challenges and am willing to relocate anywhere in the world to pursue them.
-If you’re interested in learning more about my experience or thoughts, feel free to check out my posts.
-I welcome any inquiries via social media.
+## My Background in AI and Data Science
+
+My background is in computational science, with expertise in optimization algorithms, artificial intelligence, and data-driven decision-making. I’ve worked on a variety of AI-driven solutions, from search engines to demand prediction. One of my proudest achievements is developing a deep-learning model for estimating brain injuries, which earned me the best master’s thesis award. Additionally, I gained hands-on experience in software engineering, including developing charging controllers for electric vehicles during an internship in Germany.
+
+## Passion for Global Inspiration
+
+Beyond technology, I thrive on product design and transforming complex ideas into practical solutions. My experience working with global teams across diverse cultures has sharpened my ability to communicate effectively and collaborate across different perspectives. I have a deep passion for traveling and immersing myself in different cultures. Exploring new places and perspectives fuels my creativity and inspires my work. My goal is to work from various locations around the world, drawing insights from diverse environments and integrating them into AI-driven innovations.
+
+As I navigate this new chapter, I’m excited about the limitless possibilities of AI and the future we’re building together. Let’s shape the future, one AI agent at a time!
