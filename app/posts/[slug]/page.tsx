@@ -69,8 +69,10 @@ export default async function Post({ params }: PostProps) {
 						))}
 					</div>
 				)}
-				<Profile />
 			</article>
+			<h2 className="pb-10">
+				<Profile />
+			</h2>
 			<div className="prose dark:prose-invert">
 				<h2>More posts</h2>
 				{posts.map((post) => (

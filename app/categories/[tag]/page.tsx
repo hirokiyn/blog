@@ -41,7 +41,7 @@ export default async function Category({ params }: CategoryProps) {
 	return (
 		<>
 			<h1 className="flex items-center justify-between pt-10">
-				<Profile link={false} />
+				<Profile />
 				<span>#{category}</span>
 			</h1>
 			<div className="prose dark:prose-invert">

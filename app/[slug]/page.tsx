@@ -46,12 +46,16 @@ export default async function Page({ params }: PageProps) {
 	const content = await markdownToHtml(page.content || "");
 
 	return (
-		<article className="prose py-6 dark:prose-invert">
-			<h1>{page.title}</h1>
-			{page.description && <p className="text-xl">{page.description}</p>}
-			<hr />
-			<div dangerouslySetInnerHTML={{ __html: content }} />
-			<Profile />
-		</article>
+		<>
+			<article className="prose py-6 dark:prose-invert">
+				<h1>{page.title}</h1>
+				{page.description && <p className="text-xl">{page.description}</p>}
+				<hr />
+				<div dangerouslySetInnerHTML={{ __html: content }} />
+			</article>
+			<h2 className="pb-10">
+				<Profile />
+			</h2>
+		</>
 	);
 }

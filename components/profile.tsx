@@ -1,21 +1,18 @@
 import Link from "next/link";
 
-import { USER_ID } from "@/lib/constants";
-
-export function Profile({ link = true }) {
+export function Profile() {
 	return (
 		<div className="flex items-center space-x-2">
-			<img src="/logo.png" alt="logo" className="w-10 rounded-full" />
-			<span className="text-xl font-bold">hiroki</span>
-			{link && (
-				<Link
-					href={`https://x.com/${USER_ID}`}
-					target="_blank"
-					className="text-base text-slate-500 dark:text-slate-400"
-				>
-					@{USER_ID}
-				</Link>
-			)}
+			<img src="/logo.png" alt="logo" className="w-12 rounded-full" />
+			<div className="grid">
+				<span className="text-xl font-bold">hiroki</span>
+				<div>
+					<span>Founder of </span>
+					<Link href="https://about.epismo.ai/en" target="_blank" className="underline">
+						<span>Epismo</span>
+					</Link>
+				</div>
+			</div>
 		</div>
 	);
 }
