@@ -36,6 +36,11 @@ export function generateStaticParams(): CategoryProps["params"][] {
 
 export default async function Category({ params }: CategoryProps) {
 	const category = (await params)?.tag;
+
+	if (!category) {
+		return notFound();
+	}
+
 	const posts = getCategorizedPosts(category);
 
 	return (
