@@ -1,15 +1,15 @@
 ---
-title: Launching Epismo v1
+title: Launching Epismo 0.1
 description: Epismo turns AI into true teammates, syncing tasks from meetings, chats, and docs. It spots risks early, turns noise into action, and keeps teams clear, fast, and adaptive. Experience the smarter way to work.
-date: "2025-09-18"
-tags: []
+date: "2025-10-01"
+tags: ["news"]
 ---
 
 The future of work isn’t about machines replacing us. It’s about intelligence working with us. With Epismo, **AI agents become your teammates** that make clarity, focus, and momentum possible.
 
-<!-- <iframe class="w-full aspect-video" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe> -->
+<iframe class="w-full aspect-video" src="https://www.youtube.com/embed/40FApjaD1mo?si=FhPVsEwuO-8uZN2W" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe>
 
-[[Epismo] Try for free](https://epismo.ai)
+[Try Epismo Free](https://epismo.ai)
 
 ## What's Really Holding Teams Back
 
