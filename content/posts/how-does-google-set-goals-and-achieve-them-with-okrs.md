@@ -29,7 +29,7 @@ OKRs today become a part of their work culture at Google and used extensively ac
 
 ## Moonshots
 
-Google believes “stretch goals” stimulate innovation beyond what seems impossible to make, as they set their scoring standards from zero to one, 100% accomplishment by the set target would mean that the goal set by the employee is not ambitious enough.
+Google believes "stretch goals" stimulate innovation beyond what seems impossible to make, as they set their scoring standards from zero to one, 100% accomplishment by the set target would mean that the goal set by the employee is not ambitious enough.
 Scoring 0.7 is considered ideal.
 OKRs grading is visualized by color at Google as follows: 0.7 to 1.0 = Green (Delivered), 0.4 to 0.6 = Yellow (Made progress but fell short of completion), 0.0 to 0.3 = Red (Failed to make real progress).
 
@@ -48,7 +48,7 @@ You probably will not fail spectacularly, but you are guaranteed not to succeed 
 
 Transparency is the foundation that brings in psychological safety to motivate the team to set aspirational objectives
 Aligning the individual contribution to the organizational goal creates value and making it publicly viewed and discussed invokes positive discussion and brings in synergy.
-Google’s core values, transparency is also part of the foundation on which OKRs are built.
+Google's core values, transparency is also part of the foundation on which OKRs are built.
 
 Creating an organizational goal and then following department and individual objectives align with the organizational goal brings clarity and empowerment.
 OKRs also allow you to align cross-functionally or create ladder OKRs.
@@ -57,4 +57,4 @@ Google ensures that the bottom-up goals are 60% and they create vertical alignme
 
 OKRs also allow you to align cross-functionally or create ladder OKRs to accomplish the common goals so different groups and teams can contribute to the same project.
 The autonomy of the framework makes it more unique and also increases focus and engagement.
-These commitments appear clearly in all the group’s OKRs involved in accomplishing the goals.
+These commitments appear clearly in all the group's OKRs involved in accomplishing the goals.

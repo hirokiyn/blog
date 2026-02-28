@@ -45,10 +45,12 @@ export default async function Category({ params }: CategoryProps) {
 
 	return (
 		<>
-			<h1 className="flex items-center justify-between pt-10">
-				<Profile />
-				<span>#{category}</span>
-			</h1>
+			<div className="space-y-6 pt-10">
+				<h1>
+					<Profile />
+				</h1>
+				<div className="text-lg font-semibold">#{category}</div>
+			</div>
 			<div className="prose dark:prose-invert">
 				{posts.map((post) => (
 					<article key={post.slug}>

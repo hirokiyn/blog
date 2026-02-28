@@ -28,7 +28,7 @@ But vague directions can lead to confusion and wasted effort.
 
 Moreover, ChatGPT operates in a chat format, forgetting previous conversations as soon as a new chat starts.
 This means you constantly have to give detailed instructions, as if you're always dealing with a new hire.
-Although the new "Memories" feature helps, it’s not a complete fix.
+Although the new "Memories" feature helps, it's not a complete fix.
 
 Using ChatGPT effectively requires you to be clear and specific, much like managing a team.
 You need to outline the task's background, purpose, and resources, which can be cognitively demanding.
@@ -52,8 +52,8 @@ In contrast, many apps adhere to object-oriented UI design, where users can star
 These designs reduce friction and make actions simple and intuitive.
 
 Consider the simplicity of using an app like UberEats.
-When you open the app, you’re immediately presented with a list of restaurants (objects).
-You don’t need to type out your entire request.
+When you open the app, you're immediately presented with a list of restaurants (objects).
+You don't need to type out your entire request.
 Instead, you browse, select a restaurant, and make your action like view details, make reservations, or write reviews without much thought.
 Each step is guided and intuitive, significantly reducing the cognitive load on the user.
 

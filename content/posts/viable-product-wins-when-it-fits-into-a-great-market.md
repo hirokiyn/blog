@@ -14,7 +14,7 @@ If you ask entrepreneurs or VCs which of team, product, or market is most import
 On the other hand, if you ask engineers, many will say product.
 Apple and Google are the best companies in the industry today because they build the best products.
 Without the product there is no company.
-However, Andreessen takes the third position—He’ll assert that market is the most important factor in a startup’s success or failure.
+However, Andreessen takes the third position—He'll assert that market is the most important factor in a startup's success or failure.
 
 Why?
 
@@ -33,7 +33,7 @@ Hence, startups need to devote their energy to reaching PMF rather than focusing
 To achieve PMF, startups can adopt tactics like diligent market research, rapid experimentation, customer development, and a strong focus on user experience.
 The ultimate goal is not only to build a product that solves a significant problem for customers but to do so better than any existing solution.
 
-Assessing PMF isn’t always straightforward as it’s not a one-size-fits-all concept.
+Assessing PMF isn't always straightforward as it's not a one-size-fits-all concept.
 However, certain indicators can be used to ascertain it, such as a high customer satisfaction level, low churn rate, and rapid organic growth.
 Other indicators could include word-of-mouth referrals, expansion within existing accounts, or positive customer reviews.
 

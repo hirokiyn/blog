@@ -2,7 +2,7 @@
 title: Collaboration Fails at Epistemic Alignment in the AI Era
 description: Collaboration fails not from poor coordination but from misaligned understanding. Epismo focuses on aligning intelligence across humans and AI.
 date: "2025-12-27"
-tags: []
+tags: ["ai", "teamwork"]
 ---
 
 For a long time, collaboration has been treated as a coordination problem. We add tools for communication, task tracking, documentation, and meetings. We try to move faster and reduce friction. Sometimes this works. Often it does not.
@@ -20,7 +20,7 @@ What actually needs alignment is not just tasks, but meaning. In practice, this 
 
 -   What problem are you really solving
 -   What counts as evidence that you are making progress
--   What “done” or “quality” means in this situation
+-   What "done" or "quality" means in this situation
 
 This is not a tooling problem.
 It is an epistemic problem about how knowledge and meaning are formed and shared.
@@ -33,7 +33,7 @@ AI systems move fast, generate large volumes of output, and appear confident eve
 
 This is why the AI era forces us back to fundamental questions:
 
--   What does it mean to say we “understand” something
+-   What does it mean to say we "understand" something
 -   What does it mean for a system, human or AI, to be aligned with a team
 -   Which assumptions are we operating on, and are they actually shared
 

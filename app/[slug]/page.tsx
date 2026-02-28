@@ -52,10 +52,8 @@ export default async function Page({ params }: PageProps) {
 				{page.description && <p className="text-xl">{page.description}</p>}
 				<hr />
 				<div dangerouslySetInnerHTML={{ __html: content }} />
-			</article>
-			<h2 className="pb-10">
 				<Profile />
-			</h2>
+			</article>
 		</>
 	);
 }
