@@ -1,5 +1,5 @@
 ---
-title: Collaboration Fails at Epistemic Alignment in the AI Era
+title: Collaboration fails at epistemic alignment in the AI era
 description: Collaboration fails not from poor coordination but from misaligned understanding. Epismo focuses on aligning intelligence across humans and AI.
 date: "2025-12-27"
 tags: ["ai", "teamwork"]
