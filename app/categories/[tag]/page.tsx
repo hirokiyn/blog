@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: CategoryProps): Promise<Metad
 	}
 
 	return {
-		title: `${TITLE} - #${category}`
+		title: `#${category} | ${TITLE}`
 	};
 }
 

@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import { Profile } from "@/components/profile";
 import { getPageBySlug, getAllPages } from "@/lib/api/pages";
 import markdownToHtml from "@/lib/markdown-to-html";
+import { TITLE } from "@/lib/constants";
 
 type PageProps = {
 	params: Promise<{
@@ -20,7 +21,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 	}
 
 	return {
-		title: page.title,
+		title: `${page.title} | ${TITLE}`,
 		description: page.description
 	};
 }

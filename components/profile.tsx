@@ -6,7 +6,7 @@ export function Profile() {
 			<div className="flex items-center gap-3">
 				<img src="/hirokiyn.png" alt="logo" className="w-12 rounded-full" />
 				<div className="grid">
-					<span className="text-xl font-bold">Hiroki</span>
+					<span className="text-xl font-semibold">@hirokiyn</span>
 					<div>
 						<span>Founder of </span>
 						<Link
