@@ -1,10 +1,12 @@
 import Link from "next/link";
 
+import { OGP_IMAGE, OGP_IMAGE_ALT } from "@/lib/constants";
+
 export function Profile() {
 	return (
 		<div className="flex items-center justify-between">
 			<div className="flex items-center gap-3">
-				<img src="/hirokiyn.png" alt="logo" className="w-12 rounded-full" />
+				<img src={OGP_IMAGE} alt={OGP_IMAGE_ALT} className="w-12 rounded-full" />
 				<div className="grid">
 					<span className="text-xl font-semibold">@hirokiyn</span>
 					<div>

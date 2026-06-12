@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import { Profile } from "@/components/profile";
 import { getPageBySlug, getAllPages } from "@/lib/api/pages";
 import markdownToHtml from "@/lib/markdown-to-html";
-import { TITLE } from "@/lib/constants";
+import { OGP_IMAGE, OGP_IMAGE_ALT, TITLE } from "@/lib/constants";
 
 type PageProps = {
 	params: Promise<{
@@ -22,7 +22,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 	return {
 		title: `${page.title} | ${TITLE}`,
-		description: page.description
+		description: page.description,
+		openGraph: {
+			title: `${page.title} | ${TITLE}`,
+			description: page.description,
+			images: [
+				{
+					url: OGP_IMAGE,
+					width: 1240,
+					height: 1240,
+					alt: OGP_IMAGE_ALT
+				}
+			]
+		}
 	};
 }
 

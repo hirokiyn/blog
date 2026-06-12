@@ -6,6 +6,7 @@ import { parseISO, format } from "date-fns";
 import { Profile } from "@/components/profile";
 import { getPostBySlug, getAllPosts, getMorePosts } from "@/lib/api/posts";
 import markdownToHtml from "@/lib/markdown-to-html";
+import { OGP_IMAGE, OGP_IMAGE_ALT } from "@/lib/constants";
 
 type PostProps = {
 	params: Promise<{
@@ -23,7 +24,20 @@ export async function generateMetadata({ params }: PostProps): Promise<Metadata>
 
 	return {
 		title: post.title,
-		description: post.description
+		description: post.description,
+		openGraph: {
+			title: post.title,
+			description: post.description,
+			images: [
+				{
+					url: OGP_IMAGE,
+					width: 1240,
+					height: 1240,
+					alt: OGP_IMAGE_ALT
+				}
+			],
+			type: "article"
+		}
 	};
 }
 

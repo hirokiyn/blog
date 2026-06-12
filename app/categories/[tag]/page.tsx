@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 import { Profile } from "@/components/profile";
 import { getCategorizedPosts, getAllCategories } from "@/lib/api/posts";
-import { TITLE } from "@/lib/constants";
+import { OGP_IMAGE, OGP_IMAGE_ALT, TITLE } from "@/lib/constants";
 
 type CategoryProps = {
 	params: Promise<{
@@ -20,7 +20,18 @@ export async function generateMetadata({ params }: CategoryProps): Promise<Metad
 	}
 
 	return {
-		title: `#${category} | ${TITLE}`
+		title: `#${category} | ${TITLE}`,
+		openGraph: {
+			title: `#${category} | ${TITLE}`,
+			images: [
+				{
+					url: OGP_IMAGE,
+					width: 1240,
+					height: 1240,
+					alt: OGP_IMAGE_ALT
+				}
+			]
+		}
 	};
 }
 
